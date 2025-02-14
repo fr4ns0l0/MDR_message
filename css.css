@@ -1,0 +1,237 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+}
+
+:root {
+    --borde: 4px;
+    --blue: #9ed8ff;
+}
+
+body {
+    font-family: 'Tiny5', sans-serif;
+    background-color: #000;
+    color: var(--blue);
+    cursor: url(imgs/cursor_default.png), auto;
+}
+#app { position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    display: block;
+    background-color: #111;;
+}
+#canvas {
+    position: fixed;
+    width: 360px;
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111
+}
+@keyframes scandown {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -12px;
+    }
+}
+#scanlines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-image: url(imgs/scanlines.png);
+    background-repeat: repeat;
+    z-index: 9999;
+    display: block;
+    opacity: 0.35;
+    background-position: 0px 10px;
+    animation: scandown 0.5s linear infinite;
+}
+
+
+.canvas_section {
+    position: relative;
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+#top {
+    border-bottom: var(--borde) solid;
+}
+
+#nums {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    margin: 10px 0px;
+    z-index: 0;
+}
+
+#bottom {
+    border-top: var(--borde) solid;
+    z-index: 999;
+   height: 120px;
+}
+
+#title {
+    font-size: 28px;
+    text-align: left;
+    padding: 20px 0px 0px 20px;
+
+    float: left;
+;
+}
+
+#logo {
+    float: right;
+    padding: 18px;
+    width: 30%;
+    max-height: 70px;
+   text-align: right;
+   margin-right: 15px;
+}
+
+#logo img {
+    width: auto;
+    max-height: 40px;
+}
+
+.num {
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  
+   
+   padding: 10px;
+   z-index: 1;
+   
+    opacity: 0;
+}
+.num1 { position: relative;
+    color:var(--blue);
+}
+.num2 { position: absolute;
+    color:#fff;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.num:hover {
+    color:white;
+}   
+
+.lovebox {
+    position: absolute !important;
+    
+    top:50% !important;
+    transform: translateX(-50%) translateY(-50%);
+    border: var(--borde) var(--blue) solid;
+    width: 42.5%;
+   position: relative;
+   z-index: 999;
+   
+}
+.lovebox1 {
+    left: 26%;
+}
+.lovebox2 {
+    left: 74%;
+}
+.loveboxsection {
+    padding: 10px;
+}
+.lovefill {
+    background-image: url(imgs/progress.png);
+    background-size: 0% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    mix-blend-mode: difference;
+}
+.loveboxsection:last-child {
+    border-top:  var(--borde) var(--blue) solid;
+}
+#selection {
+    border: var(--borde) solid;
+    position: absolute;
+    top:10000px;
+    left: 10000px;
+    width: 1px;
+    height: 1px;
+    z-index: 0;
+}
+
+.loveboxdoor {
+    position: absolute;
+    width: 54%;
+    height: var(--borde);
+    display: block;
+    z-index: 0;
+    background-color: var(--blue);
+    transition: all 0.8s ease;
+}
+.doorleft {
+    top: -4px;
+    left: -4px;
+    transform-origin: left top;
+    transform: rotate(0deg);
+}
+.doorright {
+    top: -4px;
+    right: -4px;
+    transform-origin: right top;
+    transform: rotate(0deg);
+}
+.open .doorleft {
+    transform: rotate(-90deg);
+}
+.open .doorright {
+    transform: rotate(90deg);
+}
+#message {
+    font-size: 28px;
+    text-align: center;
+    padding: 10px 16px;
+    display: none;
+}
+#botreplay {
+    position: absolute;
+    bottom: 130px;
+    right: 10px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    background-image:url(imgs/replay.png);
+    background-size: cover;
+    cursor: url(imgs/cursor_hand.png), pointer;
+    z-index: 999999;
+    display: none
+}
+h1 {
+    color: violet;
+}
+.pixelheart {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image:url(imgs/pixel-heart.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
