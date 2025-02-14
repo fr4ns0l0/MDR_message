@@ -362,7 +362,6 @@ var messages = [
     "Oye, tenemos que hacer un Waffle Party algún dia no?.",
     "Los macrodatos lo confirman: te quiero más que nunca.",
     "5 años refinando la vida juntos, dentri y fueri.",
-    "Hoy es Viernes de severance, ¡y hay empanadas!",
-    "Y ChatGPT no me ha ayudado nada, ¡es un puto desastre!. "
+    "Hoy es Viernes de severance, ¡y hay empanadas!"
 ];
 var messageend = " Te Kier-o mucho más que muchísimo: -Pantolo";
